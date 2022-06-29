@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>All Users List</title>
+        <style>
+            #users{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+            border-collapse: collapse; 
+            width: 100%;}
+
+            #users td, #users th{ border: 1px solid black;
+            padding: 8px;}
+
+            #users tr:nth-child(even){background-color: whitesmoke;}
+
+            #users tr:hover{background-color: beige;}
+
+            #users th{padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;}
+        </style>
+    </head>
+    <body>
+        <h1>All USER DETAILS are in below</h1>
+        <table id="users">
+            <tr><th>NAME</th><th>AGE</th><th>PHONE NUMBER</th></tr>
+            {% for usr in data %}
+            <tr>
+                <td>{{usr[0]}}</td>
+                <td>{{usr[1]}}</td>
+                <td>{{usr[2]}}</td></tr>
+            {% endfor %}
+        </table><br><br><br>
+        <a href="/usercredentials">Go Back to Enter User Details</a><br><br>
+        <a href="/">Go Back Home</a><BR></BR>
+        <form action="/allusers" method="post"><input type="submit" value="DELETE_ALL"/></form>
+
+    </body>
+</html>

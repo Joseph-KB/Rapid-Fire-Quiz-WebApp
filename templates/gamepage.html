@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>GamePage</title>
+        <link rel="stylesheet" href="/static/homepage.css">
+        <style>body{background-color: rgb(24, 85, 121);} a{color: black;}</style>
+    </head>
+    <body>
+        <h1>Hai</h1>
+        <p>{{username|upper}}</p>
+        <div>
+            <style>h2{color: rgb(70, 1, 1); font-family:monospace; font-size: 25px;}</style>
+            <h2 align="center">You Have total 3 minutes</h2>
+        </div>
+        <div>
+            <table>
+                <tr><style>th{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: gray; font-size: 20px;}</style><th>Question</th><th>Answer</th></tr>
+                {% for qb in data %}
+                <tr>
+                    <td>
+                        {{qb[0]}}
+                    </td>
+                    <td>
+                        <input type="text" name="answer">
+                        <input type="submit" name="CHECk"/>
+                    </td>
+                    <td>{{qb[1]}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+            {% for qb in data %}
+            
+            {{qb[0]}}{{qb[1]}}
+            {%endfor%}
+            {% macro input(name, value='', type='text', size=20) -%}
+             <input type="{{ type }}" name="{{ name }}" value="{{
+                 value|e }}" size="{{ size }}">
+            {%- endmacro %}
+            <p>{{ input('username') }}</p>
+            <p>{{ input('password', type='password') }}</p>
+            
+           
+        </div>
+        <br><br><a href="/usercredentials">Go Back to Enter User Details</a><br><br>
+        <a href="/">Go Back Home</a><BR></BR>        
+    </body>
+</html>

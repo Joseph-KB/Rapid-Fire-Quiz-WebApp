@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;
+}
+h1.headrap{
+    background-color: beige;
+}
+p.intro{
+    font-size: large;
+
+}
+label.form-con{
+    background-color: yellowgreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
