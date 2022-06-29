@@ -18,7 +18,6 @@ with open("data\questions.csv") as fp:
             chosquest.append(x)
     random.shuffle(chosquest)
 
-print(chosquest)
 
 x=0
 def countdown(h,m,s):

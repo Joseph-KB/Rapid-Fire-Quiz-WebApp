@@ -1,6 +1,6 @@
 import sqlite3
 
-from colorama import Cursor
+
 
 DBname='./database/users.db'
 
